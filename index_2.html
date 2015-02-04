@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>六十七个星期的爱</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+    <audio src="mami.m4a" autoplay autobuffer autoloop loop></audio>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*2013—11-02,</span><br />
+			<span class="space"/><span class="comments">*2013-12-10</span><br />
+			<span class="space"/><span class="comments">*/</span><br /><br />
+			我的小狐狸: <span class="keyword">BUG</span> 崔<br />
+			你的小熊熊: <span class="keyword">二傻</span> 吴<br />
+			<span class="comments">// 相遇就是缘</span><br />
+			而你让缘 慢慢成长为分<br />
+			<span class="comments">// 相爱就是恋</span><br />
+			而你让恋 一点点化为长相厮守<br />
+			<span class="comments">// 天上掉下个崔宝宝</span><br />
+			The girl can not be separated by the boy;<br />			
+			<span class="comments">// 拉着手手就不会慌张</span><br />
+			The boy can not be separated  by the girl;<br />
+			<span class="comments">// 惊慌失措的梦中醒来抱紧身边安稳的人又能沉沉睡去</span><br />
+			<span class="comments">// 大汗淋漓或是双脚发抖都会在看到对方的瞬间乐开了花</span><br />
+			<span class="keyword">但是兔兔！</span> <span class="keyword">不能冷到捏！！！</span>;<br />
+			<span class="keyword">轻轻的暖住</span> <span class="keyword">宝贝手手的冰冷~</span>;<br />
+			<span class="keyword">轻轻的擦掉</span> <span class="keyword">宝贝额头的汗珠~</span>;<br />
+			<span class="placeholder"/><span class="comments">// 每天都在辛苦的宝贝 每天都在努力的我们</span><br />
+			<span class="placeholder"/><span class="comments">// 在一步一步一起朝着我们的未来 走去</span><br />
+			<span class="placeholder"/><br />
+			<span class="comments">// The boy wants the girl could well have been happy.</span><br />
+			<span class="comments">// 熊熊希望小狐狸一直都能快乐快乐！！！</span><br />
+			<br>
+
+			I just want to say:<br />
+			Baby, I love you forever;<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					我的小狐狸，你是我最心疼的宝贝 
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+						一起走到我们的地老天荒去<br/>
+					<div class="keyword">~ 你的熊熊</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2013, 11, 02);
+together.setHours(0);
+together.setMinutes(22);
+together.setSeconds(22);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<div style="text-align:center;clear:both">
+<p>@Forever Love</p>
+</div>
+</body>
+</html>
